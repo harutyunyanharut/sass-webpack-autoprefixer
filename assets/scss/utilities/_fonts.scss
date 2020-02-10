@@ -1,0 +1,14 @@
+//icomoon-code-review
+@include font-face('icomoon-project-name/icomoon-project-name', $font-icons, normal, 400);
+
+//Open Sans Regular
+@include font-face('open-sans/opensans_regular/OpenSans-Regular-webfont', 'Open Sans', normal, 400);
+
+//Open Sans Regular Italic
+@include font-face('open-sans/opensans_italic/OpenSans-Italic-webfont', 'Open Sans', italic, 400);
+
+//Open Sans Semibold
+@include font-face('open-sans/opensans_semibold/OpenSans-Semibold-webfont', 'Open Sans', normal, 600);
+
+//Open Sans Semibold Italic
+@include font-face('open-sans/opensans_semibolditalic/OpenSans-SemiboldItalic-webfont', 'Open Sans', italic, 600);

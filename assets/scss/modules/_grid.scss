@@ -1,0 +1,90 @@
+// cols equal
+@each $key,$val in $resolutions {
+  @media (min-width: $val) {
+    $grid-cols: $grid-cols-count;
+    @while $grid-cols > 1 {
+      .cols-#{$key}-#{$grid-cols} {
+        flex-wrap: wrap;
+        display: flex;
+
+        &> [class^="col"]:not(.ml-0), &> [class*=" col"]:not(.ml-0) {
+          margin-left: $grid-spacing;
+        }
+        &> [class^="col"], &> [class*=" col"] {
+          $col-width: (100% / $grid-cols);
+          $col-px-spacing: (($grid-cols - 1) * $grid-spacing / $grid-cols);
+          width: calc(#{$col-width} - #{$col-px-spacing});
+
+          &:nth-child(#{$grid-cols}n + 1) {
+            margin-left: 0;
+          }
+        }
+      }
+
+      $grid-cols: $grid-cols - 1;
+    }
+  }
+}
+
+//cols equal without media
+$grid-cols: $grid-cols-count;
+@while $grid-cols > 1 {
+  .cols-#{$grid-cols} {
+    flex-wrap: wrap;
+    display: flex;
+
+    &> [class^="col"]:not(.ml-0), &> [class*=" col"]:not(.ml-0) {
+      margin-left: $grid-spacing;
+    }
+    &> [class^="col"], &> [class*=" col"] {
+      $col-width: (100% / $grid-cols);
+      $col-px-spacing: (($grid-cols - 1) * $grid-spacing / $grid-cols);
+      width: calc(#{$col-width} - #{$col-px-spacing});
+
+      &:nth-child(#{$grid-cols}n + 1) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  $grid-cols: $grid-cols - 1;
+}
+
+// cols different sizes
+@each $key,$val in $resolutions {
+  @media (min-width: $val) {
+    $grid-cols: $grid-cols-count;
+    @while $grid-cols > 1 {
+      [class^="cols-"], [class*=" cols-"] {
+        .col-#{$key}-#{$grid-cols} {
+          $col-width: (100% / $grid-cols-count * $grid-cols);
+          $col-px-spacing:  $grid-spacing - ($grid-spacing / ($grid-cols-count / $grid-cols));
+          width: calc(#{$col-width} - #{$col-px-spacing});
+        }
+      }
+
+      $grid-cols: $grid-cols - 1;
+    }
+  }
+}
+
+// cols different sizes without media
+$grid-cols: $grid-cols-count;
+@while $grid-cols > 1 {
+  [class^="cols-"], [class*=" cols-"] {
+    .col-#{$grid-cols} {
+      $col-width: (100% / $grid-cols-count * $grid-cols);
+      $col-px-spacing:  $grid-spacing - ($grid-spacing / ($grid-cols-count / $grid-cols));
+      width: calc(#{$col-width} - #{$col-px-spacing});
+    }
+  }
+
+  $grid-cols: $grid-cols - 1;
+}
+
+// cols margins
+.cols-mb {
+  &> [class^="col"], &> [class*=" col"] {
+    margin-bottom: $grid-spacing;
+  }
+}

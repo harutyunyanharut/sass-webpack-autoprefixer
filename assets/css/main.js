@@ -86,25 +86,25 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./scss/main.scss":
-/*!************************!*\
-  !*** ./scss/main.scss ***!
-  \************************/
+/***/ "./assets/scss/main.scss":
+/*!*******************************!*\
+  !*** ./assets/scss/main.scss ***!
+  \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"css/main.css\";\n\n//# sourceURL=webpack:///./scss/main.scss?");
+eval("module.exports = __webpack_require__.p + \"main.css\";\n\n//# sourceURL=webpack:///./assets/scss/main.scss?");
 
 /***/ }),
 
 /***/ 0:
-/*!******************************!*\
-  !*** multi ./scss/main.scss ***!
-  \******************************/
+/*!*************************************!*\
+  !*** multi ./assets/scss/main.scss ***!
+  \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__(/*! ./scss/main.scss */\"./scss/main.scss\");\n\n\n//# sourceURL=webpack:///multi_./scss/main.scss?");
+eval("module.exports = __webpack_require__(/*! ./assets/scss/main.scss */\"./assets/scss/main.scss\");\n\n\n//# sourceURL=webpack:///multi_./assets/scss/main.scss?");
 
 /***/ })
 

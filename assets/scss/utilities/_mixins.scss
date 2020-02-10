@@ -1,0 +1,39 @@
+@mixin font-face($font-name, $font-face-name, $font-style, $font-weight) {
+  $file-path: $fonts-folder +'/'+ $font-name;
+  @font-face {
+    font-family: $font-face-name;
+    font-style: $font-style;
+    font-weight: $font-weight;
+    src: url($file-path + ".eot");
+    src: url($file-path + ".eot?#iefix") format('embedded-opentype'),
+    url($file-path + ".woff") format('woff'),
+    url($file-path + ".ttf") format('truetype'),
+    url($file-path + ".svg") format('svg');
+  }
+}
+
+@mixin bg-img($image: null, $repeat: null, $size: null, $color: null, $position: null) {
+  @if ($image) {
+    background-image: url($images-folder + $image);
+  }
+  background-color: $color;
+  background-size: $size;
+  background-repeat: $repeat;
+  background-position: $position;
+}
+
+@mixin position($position: absolute, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin clear-after {
+  &::after {
+    content: " ";
+    clear: both;
+    display: block;
+  }
+}

@@ -1,0 +1,33 @@
+@each $key-spaces,$val-spaces in $spaces {
+  .m-#{$key-spaces} {
+    margin: #{$val-spaces};
+  }
+  .mt-#{$key-spaces} {
+    margin-top: #{$val-spaces};
+  }
+  .mr-#{$key-spaces} {
+    margin-right: #{$val-spaces};
+  }
+  .mb-#{$key-spaces} {
+    margin-bottom: #{$val-spaces};
+  }
+  .ml-#{$key-spaces} {
+    margin-left: #{$val-spaces};
+  }
+
+  .p-#{$key-spaces} {
+    padding: #{$val-spaces};
+  }
+  .pt-#{$key-spaces} {
+    padding-top: #{$val-spaces};
+  }
+  .pr-#{$key-spaces} {
+    padding-right: #{$val-spaces};
+  }
+  .pb-#{$key-spaces} {
+    padding-bottom: #{$val-spaces};
+  }
+  .pl-#{$key-spaces} {
+    padding-left: #{$val-spaces};
+  }
+}

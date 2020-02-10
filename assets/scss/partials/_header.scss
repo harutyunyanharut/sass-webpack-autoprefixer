@@ -1,0 +1,35 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 0;
+}
+
+.logo {
+    max-width: 200px;
+
+    a {
+        display: block;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+nav {
+    
+    .menu {
+        display: flex;
+
+        li {
+            margin: 0 10px;
+
+            a {
+                display: inline-block;
+                color: #3e424b;
+            }
+        }
+    }
+}

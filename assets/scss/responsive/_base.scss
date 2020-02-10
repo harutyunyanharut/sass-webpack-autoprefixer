@@ -1,0 +1,5 @@
+@media (max-width: $screen-sm) {
+  body {
+    font-size: round($base-font-size / 1.1);
+  }
+}

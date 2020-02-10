@@ -2,9 +2,9 @@ const path = require('path');
 
 module.exports = {
     mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
-    entry: ['./scss/main.scss'],
+    entry: ['./assets/scss/main.scss'],
     output: {
-        path: path.resolve(__dirname, 'assets')
+        path: path.resolve(__dirname, 'assets/css')
     },
     module: {
         rules: [
@@ -14,7 +14,7 @@ module.exports = {
                     {
                         loader: 'file-loader',
                         options: {
-                            name: 'css/[name].css',
+                            name: '[name].css',
                         }
                     },
                     {

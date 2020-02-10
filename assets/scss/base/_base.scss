@@ -1,0 +1,27 @@
+html {
+  position: relative;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  color: $color-text;
+  font-size: $base-font-size;
+  font-family: $font-primary;
+  outline: none;
+  word-wrap: break-word;
+  font-weight: 400;
+}
+
+*, *:before, *:after {
+  outline: none;
+  box-sizing: inherit;
+}
+
+.container {
+  width: ($cont-width + $cont-padding);
+  padding-left: ($cont-padding / 2);
+  padding-right: ($cont-padding / 2);
+  margin-left: auto;
+  margin-right: auto;
+}
