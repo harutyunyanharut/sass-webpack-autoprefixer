@@ -26,7 +26,12 @@ module.exports = {
                     {
                         loader: 'postcss-loader',
                         options: {
-                            sourceMap: true
+                            ident: 'postcss',
+                            plugins: [
+                                require('autoprefixer')({}),
+                                require('cssnano')({ preset: 'default' })
+                            ],
+                            minimize: true
                         }
                     },
                     {
