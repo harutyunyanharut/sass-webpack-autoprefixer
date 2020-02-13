@@ -4,11 +4,11 @@
     font-family: $font-face-name;
     font-style: $font-style;
     font-weight: $font-weight;
-    src: url($file-path + ".eot");
-    src: url($file-path + ".eot?#iefix") format('embedded-opentype'),
+    src: local($font-face-name),
+    url($file-path + ".woff2") format('woff2'),
     url($file-path + ".woff") format('woff'),
     url($file-path + ".ttf") format('truetype'),
-    url($file-path + ".svg") format('svg');
+    url($file-path + ".eot") format('embedded-opentype');
   }
 }
 
