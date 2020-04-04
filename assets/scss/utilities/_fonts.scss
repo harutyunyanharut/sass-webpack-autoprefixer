@@ -1,5 +1,5 @@
 //icomoon-code-review
-@include font-face('icomoon-project-name/icomoon-project-name', $font-icons, normal, 400);
+@include font-face('icomoon-project-name/icomoon-project-name', $font-icons, normal, 400, $woff2: false);
 
 //Open Sans Regular
 @include font-face('open-sans/opensans_regular/OpenSans-Regular-webfont', 'Open Sans', normal, 400);

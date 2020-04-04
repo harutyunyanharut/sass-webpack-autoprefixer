@@ -1,14 +1,21 @@
-@mixin font-face($font-name, $font-face-name, $font-style, $font-weight) {
+@mixin font-face($font-name, $font-face-name, $font-style, $font-weight, $woff2: true) {
   $file-path: $fonts-folder +'/'+ $font-name;
   @font-face {
     font-family: $font-face-name;
     font-style: $font-style;
     font-weight: $font-weight;
-    src: local($font-face-name),
-    url($file-path + ".woff2") format('woff2'),
-    url($file-path + ".woff") format('woff'),
-    url($file-path + ".ttf") format('truetype'),
-    url($file-path + ".eot") format('embedded-opentype');
+    @if($woff2) {
+      src: local($font-face-name),
+      url($file-path + ".woff2") format('woff2'),
+      url($file-path + ".woff") format('woff'),
+      url($file-path + ".ttf") format('truetype'),
+      url($file-path + ".eot") format('embedded-opentype');
+    } @else {
+      src: local($font-face-name),
+      url($file-path + ".woff") format('woff'),
+      url($file-path + ".ttf") format('truetype'),
+      url($file-path + ".eot") format('embedded-opentype');
+    }
   }
 }
 
